@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Viper | Global eSports & Gaming Hub</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        obsidian: '#0A0A0C',
+                        cyberGold: '#FFD700',
+                        electricViolet: '#8A2BE2'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Jitsi External API for Free Live Voice Chat -->
+    <script src="https://meet.jit.si/external_api.js"></script>
+</head>
+<body class="bg-obsidian text-white min-h-screen font-sans selection:bg-cyberGold selection:text-black">
+
+    <!-- Top Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-obsidian/90 backdrop-blur-md border-b border-cyberGold/20 px-4 py-3 flex items-center justify-between">
+        <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyberGold to-electricViolet flex items-center justify-center text-black font-black text-xl shadow-lg shadow-cyberGold/20">
+                EV
+            </div>
+            <div>
+                <h1 class="font-extrabold tracking-wider text-lg text-cyberGold">ELITE VIPER</h1>
+                <p class="text-[10px] text-gray-400 tracking-widest uppercase">eSports & Gaming Nexus</p>
+            </div>
+        </div>
+
+        <!-- Auth Button -->
+        <div id="authContainer">
+            <button onclick="openAuthModal()" class="px-4 py-2 bg-gradient-to-r from-cyberGold to-amber-500 text-black font-bold text-sm rounded-lg shadow-md hover:opacity-90 transition">
+                <i class="fa-solid fa-user-shield mr-2"></i>Login / Sign Up
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 py-8 space-y-12">
+        
+        <!-- Hero Section -->
+        <section class="text-center space-y-4 py-10 bg-gradient-to-b from-electricViolet/10 to-transparent rounded-3xl border border-electricViolet/20 p-6">
+            <span class="px-3 py-1 bg-cyberGold/10 text-cyberGold text-xs font-semibold rounded-full border border-cyberGold/30">🔥 Season 2026 Live Now</span>
+            <h2 class="text-4xl md:text-6xl font-black tracking-tight bg-gradient-to-r from-white via-cyberGold to-electricViolet bg-clip-text text-transparent">
+                DOMINATE THE ARENA
+            </h2>
+            <p class="text-gray-400 max-w-2xl mx-auto text-sm md:text-base">
+                Join elite cash tournaments, connect with squadmates on live voice chat, and climb the global eSports leaderboards.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 pt-4">
+                <a href="#voice-hub" class="px-6 py-3 bg-electricViolet text-white font-bold rounded-xl shadow-lg shadow-electricViolet/30 hover:bg-purple-600 transition flex items-center">
+                    <i class="fa-solid fa-headset mr-2"></i> Join Voice Lobby
+                </a>
+                <a href="https://whatsapp.com/channel/0029VbE1jAPGOj9jgzuXx41W" target="_blank" class="px-6 py-3 bg-emerald-600 text-white font-bold rounded-xl shadow-lg hover:bg-emerald-500 transition flex items-center">
+                    <i class="fa-brands fa-whatsapp mr-2 text-lg"></i> WhatsApp Channel
+                </a>
+            </div>
+        </section>
+
+        <!-- LIVE VOICE CHAT HUB -->
+        <section id="voice-hub" class="space-y-6">
+            <div class="flex items-center justify-between border-b border-gray-800 pb-4">
+                <h3 class="text-2xl font-bold flex items-center text-electricViolet">
+                    <i class="fa-solid fa-microphone-lines mr-3 animate-pulse"></i>Live Squad Voice Channels
+                </h3>
+                <span class="text-xs text-emerald-400 font-semibold">● Low Latency Audio Active</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Room 1 -->
+                <div class="bg-gray-900/70 border border-electricViolet/30 rounded-2xl p-5 flex flex-col justify-between space-y-4">
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-xs font-bold text-cyberGold uppercase tracking-wider">Channel #01</span>
+                            <span class="px-2 py-0.5 bg-emerald-500/20 text-emerald-400 text-[10px] rounded-full">OPEN</span>
+                        </div>
+                        <h4 class="text-lg font-bold">BGMI Squad Matchmaking</h4>
+                        <p class="text-xs text-gray-400 mt-1">Talk live with players looking for classic or custom room squads.</p>
+                    </div>
+                    <button onclick="startVoiceChat('EliteViper_BGMI_Lobby')" class="w-full py-2.5 bg-electricViolet hover:bg-purple-600 text-white font-bold text-xs rounded-xl transition flex items-center justify-center">
+                        <i class="fa-solid fa-phone-volume mr-2"></i> Connect Mic & Join
+                    </button>
+                </div>
+
+                <!-- Room 2 -->
+                <div class="bg-gray-900/70 border border-electricViolet/30 rounded-2xl p-5 flex flex-col justify-between space-y-4">
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-xs font-bold text-cyberGold uppercase tracking-wider">Channel #02</span>
+                            <span class="px-2 py-0.5 bg-emerald-500/20 text-emerald-400 text-[10px] rounded-full">OPEN</span>
+                        </div>
+                        <h4 class="text-lg font-bold">Tournament Strategy Room</h4>
+                        <p class="text-xs text-gray-400 mt-1">Coordinate drops, rotations, and calls before matches start.</p>
+                    </div>
+                    <button onclick="startVoiceChat('EliteViper_Tournament_Room')" class="w-full py-2.5 bg-electricViolet hover:bg-purple-600 text-white font-bold text-xs rounded-xl transition flex items-center justify-center">
+                        <i class="fa-solid fa-phone-volume mr-2"></i> Connect Mic & Join
+                    </button>
+                </div>
+
+                <!-- Custom Private Room -->
+                <div class="bg-gray-900/70 border border-cyberGold/30 rounded-2xl p-5 flex flex-col justify-between space-y-4">
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-xs font-bold text-cyberGold uppercase tracking-wider">Private Squad</span>
+                            <span class="px-2 py-0.5 bg-cyberGold/20 text-cyberGold text-[10px] rounded-full">CUSTOM</span>
+                        </div>
+                        <h4 class="text-lg font-bold">Create Private Voice Room</h4>
+                        <input type="text" id="customRoomName" placeholder="Enter secret room code..." class="mt-2 w-full px-3 py-2 bg-black/60 border border-gray-700 rounded-lg text-xs text-white focus:border-cyberGold outline-none">
+                    </div>
+                    <button onclick="joinCustomVoiceRoom()" class="w-full py-2.5 bg-cyberGold hover:bg-amber-400 text-black font-bold text-xs rounded-xl transition flex items-center justify-center">
+                        <i class="fa-solid fa-lock mr-2"></i> Start Private Voice
+                    </button>
+                </div>
+            </div>
+
+            <!-- Active Voice Chat Container (Hidden until joined) -->
+            <div id="activeVoiceWrapper" class="hidden bg-gray-950 border-2 border-cyberGold rounded-2xl p-4 space-y-3 shadow-2xl">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-2">
+                        <span class="w-3 h-3 bg-red-500 rounded-full animate-ping"></span>
+                        <span id="currentRoomTitle" class="font-bold text-sm text-cyberGold">Connected to Voice Channel</span>
+                    </div>
+                    <button onclick="leaveVoiceChat()" class="px-3 py-1.5 bg-red-600 hover:bg-red-700 text-white text-xs font-bold rounded-lg">
+                        <i class="fa-solid fa-phone-slash mr-1"></i> Disconnect
+                    </button>
+                </div>
+                <!-- Jitsi Audio Interface renders here -->
+                <div id="jitsi-container" class="w-full h-[320px] rounded-xl overflow-hidden bg-black"></div>
+            </div>
+        </section>
+
+        <!-- Tournaments Grid -->
+        <section id="tournaments" class="space-y-6">
+            <div class="flex items-center justify-between border-b border-gray-800 pb-4">
+                <h3 class="text-2xl font-bold flex items-center text-cyberGold">
+                    <i class="fa-solid fa-trophy mr-3"></i>Active Cash Tournaments
+                </h3>
+                <span class="text-xs text-gray-400">*Room ID & Password shared strictly on WhatsApp</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-gray-900/60 border border-gray-800 rounded-2xl p-5 space-y-4 hover:border-cyberGold/50 transition">
+                    <div class="flex justify-between items-start">
+                        <span class="px-2.5 py-1 bg-electricViolet/20 text-electricViolet text-xs font-bold rounded-md border border-electricViolet/30">BGMI Squad</span>
+                        <span class="text-cyberGold font-extrabold">₹5,000 Pool</span>
+                    </div>
+                    <h4 class="text-lg font-bold">Viper Battleground Championship</h4>
+                    <p class="text-xs text-gray-400">Map: Erangel | Perspective: TPP</p>
+                    <div class="flex justify-between items-center pt-2 border-t border-gray-800 text-sm">
+                        <span class="text-gray-400">Entry: <strong class="text-white">₹50</strong></span>
+                        <button onclick="registerTournament('Viper Battleground Championship')" class="px-4 py-2 bg-cyberGold text-black font-bold text-xs rounded-lg hover:bg-amber-400 transition">Register Now</button>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-gray-900/60 border border-gray-800 rounded-2xl p-5 space-y-4 hover:border-cyberGold/50 transition">
+                    <div class="flex justify-between items-start">
+                        <span class="px-2.5 py-1 bg-blue-500/20 text-blue-400 text-xs font-bold rounded-md border border-blue-500/30">Free Fire MAX</span>
+                        <span class="text-cyberGold font-extrabold">₹2,500 Pool</span>
+                    </div>
+                    <h4 class="text-lg font-bold">Solo Clash Showdown</h4>
+                    <p class="text-xs text-gray-400">Map: Bermuda | Mode: Solo</p>
+                    <div class="flex justify-between items-center pt-2 border-t border-gray-800 text-sm">
+                        <span class="text-gray-400">Entry: <strong class="text-emerald-400">FREE</strong></span>
+                        <button onclick="registerTournament('Solo Clash Showdown')" class="px-4 py-2 bg-cyberGold text-black font-bold text-xs rounded-lg hover:bg-amber-400 transition">Register Now</button>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-gray-900/60 border border-gray-800 rounded-2xl p-5 space-y-4 hover:border-cyberGold/50 transition">
+                    <div class="flex justify-between items-start">
+                        <span class="px-2.5 py-1 bg-amber-500/20 text-amber-400 text-xs font-bold rounded-md border border-amber-500/30">Ludo King</span>
+                        <span class="text-cyberGold font-extrabold">₹1,000 Pool</span>
+                    </div>
+                    <h4 class="text-lg font-bold">Speed Ludo Battle</h4>
+                    <p class="text-xs text-gray-400">Mode: 4 Players | Fast Paced</p>
+                    <div class="flex justify-between items-center pt-2 border-t border-gray-800 text-sm">
+                        <span class="text-gray-400">Entry: <strong class="text-white">₹20</strong></span>
+                        <button onclick="registerTournament('Speed Ludo Battle')" class="px-4 py-2 bg-cyberGold text-black font-bold text-xs rounded-lg hover:bg-amber-400 transition">Register Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Auth Modal Popup -->
+    <div id="authModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-gray-900 border border-gray-800 w-full max-w-md rounded-2xl p-6 space-y-6 relative shadow-2xl">
+            <button onclick="closeAuthModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-lg"><i class="fa-solid fa-xmark"></i></button>
+            <div class="text-center space-y-2">
+                <h3 class="text-2xl font-black text-cyberGold">Welcome to Elite Viper</h3>
+                <p class="text-xs text-gray-400">Sign in to participate in tournaments & voice chat</p>
+            </div>
+            
+            <div class="space-y-4">
+                <!-- Google Login Button -->
+                <button onclick="loginWithGoogle()" class="w-full py-3 bg-white text-black font-bold rounded-xl flex items-center justify-center space-x-3 hover:bg-gray-100 transition shadow">
+                    <i class="fa-brands fa-google text-red-500 text-lg"></i>
+                    <span>Continue with Google</span>
+                </button>
+
+                <div class="relative flex py-2 items-center">
+                    <div class="flex-grow border-t border-gray-800"></div>
+                    <span class="flex-shrink mx-4 text-gray-500 text-xs uppercase">Or with Phone OTP</span>
+                    <div class="flex-grow border-t border-gray-800"></div>
+                </div>
+
+                <!-- Phone Input -->
+                <div class="space-y-2">
+                    <input type="tel" id="phoneNumber" placeholder="Enter Phone Number (+919876543210)" class="w-full px-4 py-3 bg-black/50 border border-gray-800 rounded-xl text-white focus:border-cyberGold outline-none text-sm">
+                    <div id="recaptcha-container"></div>
+                    <button onclick="sendOTP()" class="w-full py-3 bg-electricViolet text-white font-bold rounded-xl hover:bg-purple-700 transition text-sm">Send OTP</button>
+                </div>
+
+                <!-- OTP Input -->
+                <div class="space-y-2 pt-2">
+                    <input type="text" id="otpCode" placeholder="Enter 6-digit OTP" class="w-full px-4 py-3 bg-black/50 border border-gray-800 rounded-xl text-white focus:border-cyberGold outline-none text-sm">
+                    <button onclick="verifyOTP()" class="w-full py-3 bg-cyberGold text-black font-bold rounded-xl hover:bg-amber-400 transition text-sm">Verify & Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-20 border-t border-gray-800 py-8 text-center text-xs text-gray-500 space-y-2">
+        <p>&copy; 2026 Elite Viper Official. All rights reserved. Contact: montebhai5@gmail.com</p>
+        <div class="flex justify-center space-x-4 pt-2 text-base text-gray-400">
+            <a href="https://youtube.com/@eliteviper_official?si=NMSrsSoooceQ6Zxe" target="_blank" class="hover:text-cyberGold"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://instagram.com/eliteviper_official" target="_blank" class="hover:text-cyberGold"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://whatsapp.com/channel/0029VbE1jAPGOj9jgzuXx41W" target="_blank" class="hover:text-cyberGold"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+    </footer>
+
+    <!-- Voice Chat Script (Jitsi Audio-Only Mode) -->
+    <script>
+        let jitsiApi = null;
+        let currentUserName = "Viper_Player_" + Math.floor(100 + Math.random() * 900);
+
+        function startVoiceChat(roomName) {
+            const wrapper = document.getElementById('activeVoiceWrapper');
+            const container = document.getElementById('jitsi-container');
+            const title = document.getElementById('currentRoomTitle');
+            
+            // Clear previous session if any
+            if (jitsiApi) {
+                jitsiApi.dispose();
+            }
+            container.innerHTML = "";
+            wrapper.classList.remove('hidden');
+            title.innerText = "Live Voice: " + roomName.replace(/_/g, ' ');
+
+            // Scroll to voice box
+            wrapper.scrollIntoView({ behavior: 'smooth' });
+
+            const domain = 'meet.jit.si';
+            const options = {
+                roomName: roomName,
+                width: '100%',
+                height: 320,
+                parentNode: container,
+                userInfo: {
+                    displayName: currentUserName
+                },
+                configOverwrite: {
+                    startWithAudioMuted: false,
+                    startWithVideoMuted: true,
+                    disableVideo: true,
+                    prejoinPageEnabled: false
+                },
+                interfaceConfigOverwrite: {
+                    TOOLBAR_BUTTONS: ['microphone', 'hangup', 'chat', 'settings'],
+                    SHOW_JITSI_WATERMARK: false
+                }
+            };
+            jitsiApi = new JitsiMeetExternalAPI(domain, options);
+        }
+
+        function joinCustomVoiceRoom() {
+            const code = document.getElementById('customRoomName').value.trim();
+            if (!code) {
+                alert("Please enter a secret room name or code first!");
+                return;
+            }
+            startVoiceChat("EliteViper_Private_" + code.replace(/\s+/g, '_'));
+        }
+
+        function leaveVoiceChat() {
+            if (jitsiApi) {
+                jitsiApi.dispose();
+                jitsiApi = null;
+            }
+            document.getElementById('activeVoiceWrapper').classList.add('hidden');
+        }
+    </script>
+
+    <!-- Firebase SDK Scripts -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { getAuth, GoogleAuthProvider, signInWithPopup, RecaptchaVerifier, signInWithPhoneNumber, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+
+        const firebaseConfig = {
+          apiKey: "AIzaSyCFk_r5w0kv0rC9PwSlde1y4bG2dxjVwIM",
+          authDomain: "elite-viper.firebaseapp.com",
+          projectId: "elite-viper",
+          storageBucket: "elite-viper.firebasestorage.app",
+          messagingSenderId: "309373869533",
+          appId: "1:309373869533:web:303933ea5a057a8a452a34",
+          measurementId: "G-ZJ3T4M7H7F"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        let loggedInUser = null;
+
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                loggedInUser = user;
+                window.currentUserName = user.displayName || user.phoneNumber || "Viper_Pro";
+                updateUserUI(user);
+            }
+        });
+
+        window.openAuthModal = () => document.getElementById('authModal').classList.remove('hidden');
+        window.closeAuthModal = () => document.getElementById('authModal').classList.add('hidden');
+
+        windo
